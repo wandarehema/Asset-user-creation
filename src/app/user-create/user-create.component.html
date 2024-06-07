@@ -1,0 +1,90 @@
+
+<div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+      <div class="card auth-card">
+        <div class="text-center mb-4">
+          <div class="user-form">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()" style="color: gree;">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" formControlName="firstName"
+                        class="form-control form-control-lg" placeholder="Enter your first name">
+                    <div class="invalid-feedback"
+                        *ngIf="userForm.get('firstName')?.invalid && (userForm.get('firstName')?.dirty || userForm.get('firstName')?.touched)">
+                        First Name is required
+                    </div>
+                 </div>
+                
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" formControlName="lastName"
+                        class="form-control form-control-lg" placeholder="Enter your last name">
+                    <div class="invalid-feedback"
+                        *ngIf="userForm.get('lastName')?.invalid && (userForm.get('lastName')?.dirty || userForm.get('lastName')?.touched)">
+                        Last Name is required
+                    </div>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" formControlName="email" class="form-control form-control-lg"
+                        placeholder="Enter your email">
+                    <div class="invalid-feedback"
+                        *ngIf="userForm.get('email')?.invalid && (userForm.get('email')?.dirty || userForm.get('email')?.touched)">
+                        <div *ngIf="userForm.get('email')?.errors?.['required']">Email is required</div>
+                        <div *ngIf="userForm.get('email')?.errors?.['email']">Invalid email format</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="userRole">User Role:</label>
+                    <select id="userRole" formControlName="userRole" class="form-control form-control-lg">
+                        <option value="" disabled selected hidden>Enter your role</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Officer">Officer</option>
+                    </select>
+                    <div class="invalid-feedback"
+                        *ngIf="userForm.get('userRole')?.invalid && (userForm.get('userRole')?.dirty || userForm.get('userRole')?.touched)">
+                        User Role is required
+                    </div>
+                </div>
+                <div>
+                    <label for="userName">Branch:</label>
+                    <input type="text" id="Branch" formControlName="Branch" class="form-control form-control-lg"
+                        placeholder="Enter your Branch">
+                    <div class="invalid-feedback"
+                        *ngIf="userForm.get('Branch')?.invalid && (userForm.get('Branch')?.dirty || userForm.get('Branch')?.touched)">
+                        Branch is required
+                    </div>
+                </div>
+                <div>
+                    <label for="userName">User Name:</label>
+                    <input type="text" id="userName" formControlName="userName"
+                        class="form-control form-control-lg" placeholder="Enter your username">
+                    <div class="invalid-feedback"
+                        *ngIf="userForm.get('userName')?.invalid && (userForm.get('userName')?.dirty || userForm.get('userName')?.touched)">
+                        User Name is required
+                    </div>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" formControlName="password"
+                        class="form-control form-control-lg" placeholder="Enter your password">
+                    <div class="invalid-feedback"
+                        *ngIf="userForm.get('password')?.invalid && (userForm.get('password')?.dirty || userForm.get('password')?.touched)">
+                        Password is required
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg mt-3">Save</button>
+  
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- tabel-content -->
+  
+
+
+

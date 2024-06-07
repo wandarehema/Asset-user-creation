@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+
+/* Container and Card */
+.container-fluid.page-body-wrapper.full-page-wrapper {
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card.auth-card {
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 600px; /* Increased size */
+}
+
+/* Form and Inputs */
+.user-form {
+  width: 100%;
+}
+
+.user-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-form form > div {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.user-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: absolute;
+  top: -10px; /* Position the label above the input */
+  left: 15px; /* Adjusted the label position */
+  background-color: #ffffff; /* Match the background color to the card */
+  padding: 0 5px; /* Add padding to the label */
+  font-size: 0.875em;
+}
+
+.user-form input.form-control, 
+.user-form select.form-control {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 100%; /* Ensure full width */
+}
+
+.user-form input.form-control::placeholder,
+.user-form select.form-control option[disabled] {
+  color: #6c757d;
+}
+
+.user-form input.form-control:focus, 
+.user-form select.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Error Messages */
+.user-form .invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+
+/* Icon Styles */
+.user-form .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.user-form input.form-control.icon-input {
+  padding-left: 40px; /* Adjust padding to accommodate the icon */
+}
+
+/* Submit Button */
+.user-form button[type="submit"] {
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.user-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
